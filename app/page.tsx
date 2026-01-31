@@ -1,6 +1,5 @@
 import { Product } from "@/types/products";
 import ProductCard from "../components/ProductCard";
-import { div } from "framer-motion/client";
 
 const App = async () => {
   const getProducts = async () => {
@@ -25,7 +24,7 @@ const App = async () => {
             className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2"
             key={product.id}
           >
-            <ProductCard product={product} />
+            <ProductCard product={product} isCart={true} />
           </div>
         ))}
     </div>

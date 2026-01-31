@@ -36,7 +36,7 @@ export default function Header() {
             </Link>
           </nav>
 
-          <Link href="/" className="relative group p-2">
+          <Link href="/cart" className="relative group p-2">
             <ShoppingCart
               className="text-white group-hover:text-blue-400 transition-colors"
               size={26}

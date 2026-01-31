@@ -1,8 +1,14 @@
 "use client";
 import { useCart } from "@/context/CartContext";
+import { Product } from "@/types/products";
 import { motion } from "framer-motion";
 
-const ProductCard = ({ product }: any) => {
+interface ProductCardProps {
+  product: Product;
+  isCart?: boolean;
+}
+
+const ProductCard = ({ product, isCart }: ProductCardProps) => {
   const { addToCart } = useCart();
 
   return (
@@ -33,14 +39,17 @@ const ProductCard = ({ product }: any) => {
           {product.price.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
         </p>
       </div>
-
-      <button
-        onClick={() => addToCart(product)}
-        className={`mt-3 w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 text-sm rounded-lg transition-colors 
+      <>
+        {isCart && (
+          <button
+            onClick={() => addToCart(product)}
+            className={`mt-3 w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 text-sm rounded-lg transition-colors 
           duration-200 flex items-center justify-center gap-1 active:scale-95 cursor-pointer`}
-      >
-        <span>+</span> Adicionar
-      </button>
+          >
+            <span>+</span> Adicionar
+          </button>
+        )}
+      </>
     </motion.div>
   );
 };
