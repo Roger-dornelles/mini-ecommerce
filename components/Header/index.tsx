@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
 import { useState } from "react";
-import CartSidebar from "@/components/CartSidebar/page";
+import CartSidebar from "@/components/CartSidebar";
 
 export default function Header() {
   const { cartCount } = useCart();
