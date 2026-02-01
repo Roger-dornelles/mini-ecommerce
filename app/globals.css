@@ -24,3 +24,27 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Estilização da Scrollbar para navegadores Webkit (Chrome, Safari, Edge) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #c0c0c0; /* Este é o blue-500 */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #c0c0c0; /* Este é o blue-600 */
+}
+
+/* Estilização para Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #c0c0c0 transparent;
+}

@@ -117,7 +117,11 @@ const CartSidebar = ({ isOpen, onClose }: Props) => {
                   })}
                 </span>
               </div>
-              <button className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-all active:scale-95 cursor-pointer shadow-lg shadow-blue-900/20">
+              <button
+                className={`${cart.length === 0 ? "opacity-50 cursor-not-allowed" : "cursor-pointer hover:bg-blue-500 transition-all active:scale-95"} w-full bg-blue-600 
+                 text-white font-bold py-4 rounded-xl  shadow-lg shadow-blue-900/20 `}
+                disabled={cart.length === 0}
+              >
                 Finalizar Compra
               </button>
             </div>
