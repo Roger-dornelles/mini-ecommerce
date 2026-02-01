@@ -4,6 +4,7 @@ import "./globals.css";
 import AnimatePage from "../components/AnimatePage";
 import { CartProvider } from "@/context/CartContext";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
         <CartProvider>
           <Header />
           <AnimatePage>{children}</AnimatePage>
+          <Footer />
         </CartProvider>
       </body>
     </html>
