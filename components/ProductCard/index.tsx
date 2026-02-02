@@ -10,6 +10,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ product, isCart = false }: ProductCardProps) => {
   const { addToCart } = useCart();
+
   return (
     <motion.div
       whileHover={{
@@ -48,7 +49,9 @@ const ProductCard = ({ product, isCart = false }: ProductCardProps) => {
 
             <button
               className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-3 mt-2 rounded-lg transition-colors duration-200 cursor-pointer"
-              onClick={() => addToCart(product)}
+              onClick={() => {
+                addToCart(product);
+              }}
             >
               Adicionar ao Carrinho
             </button>
