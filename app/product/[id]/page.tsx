@@ -32,7 +32,9 @@ const viewProduct = async ({ params }: { params: Promise<{ id: string }> }) => {
     <main className="min-h-screen mt-20  bg-zinc-950">
       <div className="max-w-7xl flex flex-col items-center m-auto">
         <div className="w-full max-w-100 text-left">
-          <h1 className="text-white text-xl font-bold">Detalhes do Produto</h1>
+          <h1 data-testid="title" className="text-white text-xl font-bold">
+            Detalhes do Produto
+          </h1>
         </div>
 
         <div className="w-full max-w-100 -mt-12">
