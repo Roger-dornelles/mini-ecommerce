@@ -33,10 +33,11 @@ export default function Header() {
             <Search className="text-zinc-500" size={18} />
             <input
               type="text"
-              placeholder="Buscar "
+              placeholder="Buscar"
               className="bg-transparent border-none outline-none text-sm ml-2 text-white w-full"
               value={searchProduct}
               onChange={(e) => setSearchProduct(e.target.value)}
+              data-testid="search-input"
             />
             <X
               size={18}
@@ -59,6 +60,7 @@ export default function Header() {
               <ShoppingCart
                 className="text-white group-hover:text-blue-400 transition-colors"
                 size={26}
+                data-testid="cart-button"
               />
 
               <AnimatePresence>
