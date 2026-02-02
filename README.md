@@ -50,7 +50,28 @@ public/                 # Arquivos estáticos (imagens, ícones)
 
   Acesse: http://localhost:3000
 
-## Para Rodar a API LOCALMENTE
+## Para Rodar a API LOCALMENTE ( JSON SERVER )
+- Siga o passo a passo para rodar um servidor para simular o backend.
+
+  Passo a passo para configurar e rodar ele localmente:
+  
+  No terminal da sua preferencia navegue até a pasta onde foi feito o clone do projeto
+
+  Faça a instalação da dependencia
+  ```
+  npm install json-server
+  ```
+
+  Após a instalação pode rodar o servidor para ter acesso aos dados da api que esta sendo usado no projeto.
+
+  ```
+  npm run server
+  ```
+- Para testar se a API esta rodando corretamente acesse [http://localhost:3333/products](http://localhost:3333/products)
+- Se a api estiver rodando corretamente deve abrir no navegador os dados qque estão em []()
+  
+
+  
 
 
 
