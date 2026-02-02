@@ -1,34 +1,61 @@
+"use client";
 import { Product } from "@/types/products";
 import ProductCard from "../components/ProductCard";
 import Link from "next/link";
+import { toast } from "react-toastify";
+import { useEffect, useState } from "react";
+import { useCart } from "@/context/CartContext";
 
-const App = async () => {
-  const getProducts = async () => {
-    const res = await fetch("http://localhost:3000/api/products", {
-      cache: "no-store",
-    });
+const App = () => {
+  const [data, setData] = useState<Product[] | null>(null);
 
-    if (!res.ok) {
-      console.log("Erro ao buscar os produtos");
+  const { searchProduct } = useCart();
+
+  const handleFetch = async () => {
+    try {
+      const url =
+        searchProduct.length >= 3
+          ? `/api/search/${searchProduct}`
+          : `/api/products`;
+
+      const res = await fetch(url, { cache: "no-store" });
+
+      if (!res.ok) {
+        toast.error("Erro ao carregar os produtos");
+
+        return;
+      }
+
+      const result = await res.json();
+      setData(result);
+    } catch (error) {
+      toast.error("Erro ao carregar os produtos");
     }
-    const data = await res.json();
-    return data;
   };
 
-  const data = await getProducts();
+  useEffect(() => {
+    handleFetch();
+  }, [searchProduct]);
 
   return (
-    <div className="flex flex-wrap justify-center max-w-6xl mx-auto p-4">
-      {data &&
-        data.map((product: Product) => (
-          <Link
-            key={product.id}
-            href={`/product/${product.id}`}
-            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2"
-          >
-            <ProductCard product={product} />
-          </Link>
-        ))}
+    <div className="max-w-6xl mx-auto p-4">
+      <div className="flex flex-wrap justify-center">
+        {data && data.length > 0 ? (
+          data.map((product: Product) => (
+            <Link
+              key={product.id}
+              href={`/product/${product.id}`}
+              className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2"
+            >
+              <ProductCard product={product} />
+            </Link>
+          ))
+        ) : (
+          <span className=" text-white w-full flex items-center justify-center mt-20">
+            Nenhum produto encontrado.
+          </span>
+        )}
+      </div>
     </div>
   );
 };

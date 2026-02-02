@@ -1,6 +1,6 @@
 "use client";
 
-import { ShoppingCart, Store, Search } from "lucide-react";
+import { ShoppingCart, Store, Search, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
@@ -8,8 +8,12 @@ import { useState } from "react";
 import CartSidebar from "@/components/CartSidebar";
 
 export default function Header() {
-  const { cartCount } = useCart();
-  const [isCartOpen, setIsCartOpen] = useState(false);
+  const { cartCount, setSearchProduct, searchProduct } = useCart();
+  const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
+
+  const close = () => {
+    setSearchProduct("");
+  };
 
   return (
     <>
@@ -31,6 +35,13 @@ export default function Header() {
               type="text"
               placeholder="Buscar "
               className="bg-transparent border-none outline-none text-sm ml-2 text-white w-full"
+              value={searchProduct}
+              onChange={(e) => setSearchProduct(e.target.value)}
+            />
+            <X
+              size={18}
+              onClick={close}
+              className={`${searchProduct.length > 0 ? "cursor-pointer" : "hidden"} text-zinc-500`}
             />
           </div>
 
