@@ -3,7 +3,7 @@
 ## 🛒 Mini-Ecommerce
 Uma aplicação de um mini e-commerce moderno desenvolvida com Next.js, focada em performance, escalabilidade e experiência do usuário.
 
-## Escolha do framework
+## ❓Escolha do framework
 A escolha do Next.js como framework principal foi baseada nos seguintes pilares:
 
 Static Site Generation para páginas de produtos, garantindo performance extrema.
@@ -42,3 +42,25 @@ public/                 # Arquivos estáticos (imagens, ícones)
   ```
   npm install
   ```
+
+  Após a instalação das dependencias pode rodar o projeto localmente
+  ```
+  npm run dev
+  ```
+
+  Acesse: http://localhost:3000
+
+## Para Rodar a API LOCALMENTE
+
+
+
+
+
+## 🧠 Decisões Técnicas Relevantes
+TypeScript: Adotado para garantir segurança de tipos, reduzindo erros em tempo de execução e melhorando o IntelliSense no editor.
+
+Tailwind CSS: Utilizado para estilização rápida e utilitária, garantindo um design responsivo e com baixo custo de manutenção.
+
+Cypress para E2E: Escolhido pela simulação do fluxo real do usuário EX: adicionar ao carrinho.
+
+Estado Global decidi usar Context API para gerenciar o carrinho, o que o usuario digita na busca permitindo que os dados persistam durante a navegação entre páginas de forma fluida.
