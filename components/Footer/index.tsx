@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-zinc-950 border-t border-zinc-800 text-zinc-400 py-12 px-4 mt-12">
+    <footer className="bg-zinc-950 border-t border-zinc-800 text-zinc-400 py-12 px-4 mt-12" data-testid="footer">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         <div className="flex flex-col gap-2">
           <h2 className="text-white text-xl font-bold tracking-tighter">
