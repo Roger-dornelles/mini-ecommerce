@@ -92,6 +92,7 @@ const CartSidebar = ({ isOpen, onClose }: Props) => {
                           <button
                             onClick={() => plus(product)}
                             className="p-1 hover:text-blue-500 transition-colors cursor-pointer"
+                            data-testid="increment-button"
                           >
                             <Plus size={14} />
                           </button>
