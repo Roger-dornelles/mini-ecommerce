@@ -68,7 +68,9 @@ public/                 # Arquivos estáticos (imagens, ícones)
   npm run server
   ```
 - Para testar se a API esta rodando corretamente acesse [http://localhost:3333/products](http://localhost:3333/products)
-- Se a api estiver rodando corretamente deve abrir no navegador os dados qque estão em []()
+- Se a api estiver rodando corretamente deve abrir no navegador os dados que estão em
+
+   [DADOS DA API](https://github.com/Roger-dornelles/mini-ecommerce/blob/main/db.json)
   
 
   
