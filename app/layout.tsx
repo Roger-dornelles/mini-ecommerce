@@ -19,6 +19,25 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Mini Ecommerce",
   description: "Criação de uma mini loja virtual",
+  openGraph: {
+    title: "Mini Ecommerce",
+    description: "A melhor loja ecommerce.",
+    url: "https://mini-ecommerce-dwcgrtp1x-rogerdornelles-projects.vercel.app/",
+    siteName: "Store",
+    images: [
+      {
+        url: "https://mini-ecommerce-dwcgrtp1x-rogerdornelles-projects.vercel.app/public/logo.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
