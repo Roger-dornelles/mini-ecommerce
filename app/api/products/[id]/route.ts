@@ -9,6 +9,10 @@ export async function GET(
 
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`, {
       cache: "no-store",
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
 
     if (!res.ok) {
@@ -20,7 +24,7 @@ export async function GET(
 
     const products = await res.json();
 
-    const product = products.find(
+    const product = products.products.find(
       (p: { id: string | number }) => String(p.id) === id,
     );
 
