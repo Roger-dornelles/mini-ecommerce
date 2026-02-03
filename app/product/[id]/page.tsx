@@ -6,9 +6,12 @@ const viewProduct = async ({ params }: { params: Promise<{ id: string }> }) => {
 
   const getProduct = async (): Promise<Product | null> => {
     try {
-      const res = await fetch(`http://localhost:3000/api/products/${id}`, {
-        cache: "no-store",
-      });
+      const res = await fetch(
+        `https://mini-ecommerce-khaki-chi.vercel.app/api/products/${id}`,
+        {
+          cache: "no-store",
+        },
+      );
 
       if (!res.ok) throw new Error("Erro ao buscar os produtos");
       const data: Product = await res.json();

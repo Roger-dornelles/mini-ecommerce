@@ -10,7 +10,7 @@ export async function GET(
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`);
     const products = await res.json();
 
-    const filtered = products.filter((p: any) =>
+    const filtered = products.products.filter((p: any) =>
       p.name.toLowerCase().includes(text.toLowerCase()),
     );
 
