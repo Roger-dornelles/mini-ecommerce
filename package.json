@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "server": "json-server --watch db.json --port 3333"
+    "server": "json-server --watch db.json --port 3333",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "dependencies": {
     "framer-motion": "^12.29.2",
