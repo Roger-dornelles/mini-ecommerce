@@ -14,6 +14,17 @@ Otimização de Imagens nativa como o componente `next/image` que gerencia autom
 
 Zero Configurações e suporte nativo a TypeScript, Fast Refresh e TailwindCSS que traz rapidez ao desenvolvimento e reponsividade.
 
+
+
+## 📓 Tecnologias usadas
+
+- NextJs
+- Tailwind CSS
+- Json Server
+- React Toastify
+- Framer Motion
+- Cypress
+
 ## 📂 Estrutura de Pastas
 O projeto segue uma arquitetura modular e escalável:
 
@@ -29,6 +40,8 @@ cypress/                # Testes (E2E)
 public/                 # Arquivos estáticos (imagens, ícones)
 
 ```
+
+
 
 ## 🛠 Como rodar o projeto localmente
 - Siga o passo a passo para rodar o projeto localmente:
@@ -49,6 +62,8 @@ public/                 # Arquivos estáticos (imagens, ícones)
   ```
 
   Acesse: http://localhost:3000
+
+  
 
 ## Para Rodar a API LOCALMENTE ( JSON SERVER )
 ### USAR OUTRO TERMINAL ( ABA ) POIS SÂO COMANDOS DIFERENTES PARA RODAR OS PROJETOS
@@ -74,10 +89,35 @@ public/                 # Arquivos estáticos (imagens, ícones)
    [DADOS DA API](https://github.com/Roger-dornelles/mini-ecommerce/blob/main/db.json)
   
 
+
   
+## Para rodar os testes do Cypress
 
+- Siga o passo a passo pois tem duas opções principais:
 
+- O Modo Interativo (com interface visual) e o Modo Headless (via terminal).
 
+- Modo Interativo (Interface Visual)
+  - Em outro terminal ( ABA ) execute o comando
+ 
+  ```
+  npm run cypress:open
+  ```
+
+  - Uma janela abrirá e selecione E2E Testing.
+
+  - Escolha um navegador (Chrome, Edge ou Electron), de preferencia ao Electron
+
+  - Clique no arquivo do teste que queira executar para começar a execução.
+
+- Modo Headless (Apenas Terminal)
+  -  É mais rápido a execução e é usado para verificar se tudo está passando sem a necessidade abrir janelas e escolher qual navegador vai rodar.
+  - Em outro terminal ( ABA ) execute o comando
+
+  ```
+  npm run cypress:run
+  ```
+  
 
 
 ## 🧠 Decisões Técnicas Relevantes
@@ -88,3 +128,13 @@ Tailwind CSS: Utilizado para estilização rápida e utilitária, garantindo um 
 Cypress para E2E: Escolhido pela simulação do fluxo real do usuário EX: adicionar ao carrinho.
 
 Estado Global decidi usar Context API para gerenciar o carrinho, o que o usuario digita na busca permitindo que os dados persistam durante a navegação entre páginas de forma fluida.
+
+
+# 💡 Dica de Fluxo de Trabalho
+Quando estiver testando, mantenha três terminais abertos:
+
+Terminal 1: npm run dev ( Projeto ).
+
+Terminal 2: npm run server ( JSON Server ).
+
+Terminal 3: npm run cypress:open ( Rodar os testes ).
