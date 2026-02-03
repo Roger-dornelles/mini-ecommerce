@@ -1,3 +1,8 @@
+# Hospedado na vercel
+- LINK
+
+ 
+  https://mini-ecommerce-dwcgrtp1x-rogerdornelles-projects.vercel.app/
 
 
 ## 🛒 Mini-Ecommerce
