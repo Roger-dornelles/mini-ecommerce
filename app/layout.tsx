@@ -20,13 +20,13 @@ export const metadata: Metadata = {
   title: "Mini Ecommerce",
   description: "Criação de uma mini loja virtual",
   openGraph: {
-    title: "Mini Ecommerce",
+    title: "Store",
     description: "A melhor loja ecommerce.",
     url: "https://mini-ecommerce-dwcgrtp1x-rogerdornelles-projects.vercel.app/",
     siteName: "Store",
     images: [
       {
-        url: "https://mini-ecommerce-dwcgrtp1x-rogerdornelles-projects.vercel.app/public/logo.png",
+        url: "/logo.png",
         width: 1200,
         height: 630,
       },
