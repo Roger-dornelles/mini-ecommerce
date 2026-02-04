@@ -7,7 +7,7 @@
 
 ## 🚨 API => Hospedado no Render 🚨
   
-⚠️ Quando for visualizar o Site aguardar a resposta da API pois o servidor do render fica em modo ociloso e demora em torno de 40s para retornar a primeira requisição
+⚠️ Quando for visualizar o Site aguardar a resposta da API pois o servidor do render fica em modo ocioso e demora em torno de 40s para retornar a primeira requisição
 
 
 ## 🛒 Mini-Ecommerce
