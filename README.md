@@ -73,6 +73,21 @@ public/                 # Arquivos estáticos (imagens, ícones)
 
   Acesse: http://localhost:3000
 
+
+  # IMPORTANTE
+
+  Na raiz do projeto adicionar um arquivo com o nome .env e adicionar os seguintes dados
+
+.env
+  ```
+  NEXT_PUBLIC_API_URL=http://localhost:3333
+  NEXT_PUBLIC_URL_LOCAL=http://localhost:3000
+  ```
+ 
+   - NEXT_PUBLIC_API_URL => roda a api localmente ( JSON SERVER )
+   - NEXT_PUBLIC_URL_LOCAL => roda o sistema localmente 
+  
+
   
 
 ## Para Rodar a API LOCALMENTE ( JSON SERVER )
