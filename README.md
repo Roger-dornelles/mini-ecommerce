@@ -74,9 +74,9 @@ public/                 # Arquivos estáticos (imagens, ícones)
   Acesse: http://localhost:3000
 
 
-  # IMPORTANTE
+# 🚨 IMPORTANTE 🚨
 
-  Na raiz do projeto adicionar um arquivo com o nome .env e adicionar os seguintes dados
+⚠️ Na raiz do projeto adicionar um arquivo com o nome .env e adicionar os seguintes dados
 
 .env
   ```
