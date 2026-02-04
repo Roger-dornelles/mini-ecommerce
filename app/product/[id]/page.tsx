@@ -1,17 +1,16 @@
 import ProductCard from "@/components/ProductCard";
 import { Product } from "@/types/products";
 
+const baseUrl = process.env.NEXT_PUBLIC_URL_LOCAL || "http://localhost:3000";
+
 const viewProduct = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
 
   const getProduct = async (): Promise<Product | null> => {
     try {
-      const res = await fetch(
-        `https://mini-ecommerce-khaki-chi.vercel.app/api/products/${id}`,
-        {
-          cache: "no-store",
-        },
-      );
+      const res = await fetch(`${baseUrl}/api/products/${id}`, {
+        cache: "no-store",
+      });
 
       if (!res.ok) throw new Error("Erro ao buscar os produtos");
       const data: Product = await res.json();
