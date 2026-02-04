@@ -91,7 +91,7 @@ public/                 # Arquivos estáticos (imagens, ícones)
   
 
 ## Para Rodar a API LOCALMENTE ( JSON SERVER )
-### USAR OUTRO TERMINAL ( ABA ) POIS SÂO COMANDOS DIFERENTES PARA RODAR OS PROJETOS
+### USAR OUTRO TERMINAL ( ABA ) POIS SÃO COMANDOS DIFERENTES PARA RODAR OS PROJETOS
 - Siga o passo a passo para rodar um servidor para simular o backend.
 
   Passo a passo para configurar e rodar ele localmente:
